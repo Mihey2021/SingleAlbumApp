@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:id="@+id/mainAlbumText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/album"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mainAlbumTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainAlbumText" />
+
+    <TextView
+        android:id="@+id/mainExecutorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/executor"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainAlbumTitle" />
+
+    <TextView
+        android:id="@+id/mainExecutor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mainExecutorText"
+        app:layout_constraintTop_toBottomOf="@id/mainAlbumTitle" />
+
+    <TextView
+        android:id="@+id/mainPublished"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainExecutor" />
+
+    <TextView
+        android:id="@+id/mainGenre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mainPublished"
+        app:layout_constraintTop_toBottomOf="@id/mainExecutor" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mainPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/yellow"
+        android:contentDescription="@string/play"
+        app:borderWidth="0dp"
+        app:elevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainGenre"
+        app:srcCompat="@drawable/ic_baseline_play_arrow_24" />
+
+    <TextView
+        android:id="@+id/currentPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toTopOf="@id/next"
+        app:layout_constraintEnd_toStartOf="@id/seekBar"
+        app:layout_constraintStart_toEndOf="@id/mainPlay"
+        app:layout_constraintTop_toTopOf="@id/mainPlay"
+        tools:text="0:25" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/next"
+        app:layout_constraintEnd_toStartOf="@id/duration"
+        app:layout_constraintStart_toEndOf="@id/currentPosition"
+        app:layout_constraintTop_toTopOf="@id/mainPlay" />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/seekBar"
+        app:layout_constraintTop_toTopOf="@id/mainPlay"
+        tools:text="3:25" />
+
+    <ImageView
+        android:id="@+id/previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_previous_24"
+        android:contentDescription="@string/previous"
+        app:layout_constraintBottom_toBottomOf="@id/mainPlay"
+        app:layout_constraintEnd_toStartOf="@id/stop"
+        app:layout_constraintStart_toEndOf="@id/mainPlay"
+        app:layout_constraintTop_toBottomOf="@id/seekBarBarrier" />
+
+    <ImageView
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_stop_24"
+        android:contentDescription="@string/stop"
+        app:layout_constraintBottom_toBottomOf="@id/mainPlay"
+        app:layout_constraintEnd_toStartOf="@id/previous"
+        app:layout_constraintStart_toEndOf="@id/next"
+        app:layout_constraintTop_toBottomOf="@id/seekBarBarrier" />
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_next_24"
+        android:contentDescription="@string/next"
+        app:layout_constraintBottom_toBottomOf="@id/mainPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/stop"
+        app:layout_constraintTop_toBottomOf="@id/seekBarBarrier" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainPlay">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/songsList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainPlay"
+            tools:listitem="@layout/song_item" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/seekBarBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="currentPosition,seekBar,duration" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/retryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        app:layout_constraintTop_toBottomOf="@id/seekBarBarrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/retry"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

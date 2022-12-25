@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Single Album App</string>
+    <string name="error_msg">An error has occurred</string>
+    <string name="play">Play</string>
+    <string name="remove">Remove</string>
+    <string name="more">More</string>
+    <string name="like">Like</string>
+    <string name="ok_text">Ok</string>
+    <string name="additional_action_one">Additional action 1</string>
+    <string name="additional_action_two">Additional action 2</string>
+    <string name="album">Album</string>
+    <string name="track">Track</string>
+    <string name="executor">Executor:</string>
+    <string name="published">Published</string>
+    <string name="genre">Genre</string>
+    <string name="retry">Retry</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="stop">Stop</string>
+
+</resources>

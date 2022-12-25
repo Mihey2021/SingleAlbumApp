@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Single Album App</string>
+    <string name="error_msg">Произошла ошибка</string>
+    <string name="play">Воспроизвести</string>
+    <string name="remove">Удалить</string>
+    <string name="more">Больше</string>
+    <string name="like">Лайк</string>
+    <string name="ok_text">Ok</string>
+    <string name="additional_action_one">Доп. действие 1</string>
+    <string name="additional_action_two">Доп. действие 2</string>
+    <string name="album">Альбом</string>
+    <string name="track">Трек</string>
+    <string name="executor">Исполнитель:</string>
+    <string name="published">Публикация</string>
+    <string name="genre">Жанр</string>
+    <string name="retry">Повторить</string>
+    <string name="unknown_error">Неизвестная ошибка</string>
+    <string name="previous">Предыдущая</string>
+    <string name="next">Следующая</string>
+    <string name="stop">Остановить</string>
+</resources>
